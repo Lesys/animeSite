@@ -1965,9 +1965,14 @@ td, th {
 	display: block;
 	position: absolute;
 	top: 0px;
-	left: 300px;
+	left: 700px;
 	width: 320px;
 	margin: 0px;
 	color: #335500;
 	font-weight: normal;
+}
+
+.popup a:hover span img {
+	max-width: 750px;
+	max-height: 750px;
 }
