@@ -69,7 +69,7 @@ function getChara($row) {
     $charaAnim = $co->query($selectAnimeChara);
     $i = 0;
     while ($chara = $charaAnim->fetch()) {
-        $anims[$chara[$i]] = getAnime($chara);
+        $anims[$i] = getAnime($chara);
         $i++;
     }
 

@@ -105,13 +105,18 @@ $(function(){
     function foncReturnChara(data){
 
         var name = data['name_characters'];
-        var grade = data['grade_anime'];
+        var grade = data['grade_characters'];
         var animes = data['chara_in_anime'];
-        var lesAnimes = ""
-/*
-        for (let anim of animes) {
-            lesAnimes += "<a href=\"index.php?action=viewAnime#viewAnimePage\" id=\"" + anim['id_anime'] + "\">" + anim['name_anime'] + "</a>"
-        }*/
+        var lesAnimes = "";
+        var i = 0;
+
+        for (anim of animes) {
+            if (i > 0) {
+                lesAnimes += "<br>";
+            }
+            lesAnimes += "<a href=\"index.php?action=viewAnime#viewAnimePage\" id=\"" + anim.id_anime + "\">" + anim.name_anime + "</a>";
+            i = i + 1;
+        }
 
         $("#name").html(name);
         $("#grade").html(grade);
